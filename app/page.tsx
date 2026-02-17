@@ -19,6 +19,16 @@ export default function Home() {
           </div>
         </header>
 
+        {/* About Section */}
+        <section>
+          <h2 className="text-xl font-bold mb-6 text-slate-900 uppercase tracking-wider border-l-4 border-slate-900 pl-3">About</h2>
+          <p className="text-slate-700 leading-relaxed">
+            青山学院大学にて知能情報工学を専攻。量子計算や機械学習、数理最適化に強い関心を持ち、
+            理論の研究からハードウェア（Raspberry Pi等）を用いた実装まで幅広く取り組んでいます。
+            2026年4月からは同大学院に進学し、実世界通信研究室にてさらなる研究に従事予定です。
+          </p>
+        </section>
+
         {/* Education Section */}
         <section>
           <h2 className="text-xl font-bold mb-6 text-slate-900 uppercase tracking-wider border-l-4 border-slate-900 pl-3">Education</h2>
@@ -28,17 +38,32 @@ export default function Home() {
                 <p className="font-bold text-lg">青山学院大学大学院 理工学研究科 理工学専攻</p>
                 <p className="text-sm text-slate-500">2026.04 - 入学予定</p>
               </div>
-              <p className="text-slate-700">知能情報コース 実世界通信研究室</p>
+              <p className="text-slate-700 font-medium">知能情報コース 実世界通信研究室</p>
             </div>
             <div>
               <div className="flex justify-between items-baseline">
                 <p className="font-bold text-lg">青山学院大学 理工学部 情報テクノロジー学科</p>
                 <p className="text-sm text-slate-500">2022.04 - 2026.03</p>
               </div>
-              <p className="text-slate-700">卒業予定</p>
+              <p className="text-slate-700 text-sm">卒業予定</p>
             </div>
             <div className="mt-4 p-4 bg-slate-50 border border-slate-200 text-sm">
-              <span className="font-bold">Future Plan:</span> フランス ジャン・モネ大学へ1年間の留学を予定。
+              <span className="font-bold text-slate-900">Future Plan:</span> フランス ジャン・モネ大学へ1年間の留学を予定。
+            </div>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section>
+          <h2 className="text-xl font-bold mb-6 text-slate-900 uppercase tracking-wider border-l-4 border-slate-900 pl-3">Technical Skills</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
+            <div>
+              <h3 className="text-sm font-bold text-slate-500 uppercase tracking-tighter mb-2">Languages</h3>
+              <p className="text-slate-800 font-medium">Python, TypeScript, C++, SQL</p>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-slate-500 uppercase tracking-tighter mb-2">Tools & Frameworks</h3>
+              <p className="text-slate-800 font-medium">Next.js, FastAPI, Docker, AWS, Raspberry Pi</p>
             </div>
           </div>
         </section>
@@ -46,31 +71,24 @@ export default function Home() {
         {/* Research & Conferences */}
         <section>
           <h2 className="text-xl font-bold mb-6 text-slate-900 uppercase tracking-wider border-l-4 border-slate-900 pl-3">Research & Conferences</h2>
-          <div className="space-y-8">
+          <div className="space-y-10">
             <div>
-              <p className="text-xs font-bold text-slate-500 mb-1">IEEE / Poster Presentation (2025)</p>
-              <h3 className="text-lg font-bold mb-1">The 2025 IEEE International Conference on Consumer Electronics (ICCE)</h3>
-              <p className="text-slate-700 italic">"Control of Battery Usage in Smartphones Based on a Regression Model"</p>
-            </div>
-
-            <div>
-              <p className="text-xs font-bold text-slate-500 mb-1">Current Research (2026)</p>
-              <h3 className="text-lg font-bold mb-1">Domain Heuristic Mixer (DHM-QAOA)</h3>
-              <p className="text-slate-700 leading-relaxed">
-                ドメイン知識を活用した動的ヒューリスティック・ミキサーの導入による、量子アルゴリズムを用いたゲームマッチングの最適化
+              <p className="text-xs font-bold text-slate-500 mb-1 tracking-wide">The 2025 IEEE ICCE / Poster Presentation</p>
+              <h3 className="text-lg font-bold mb-2 leading-snug">Control of Battery Usage in Smartphones Based on a Regression Model</h3>
+              <p className="text-slate-700 leading-relaxed text-sm">
+                [cite_start]回帰モデルを用いたスマートフォンの電力消費予測および、ユーザー体験を損なわない適応的バッテリー管理システムの開発 [cite: 1, 11, 12]。
+                [cite_start]画面輝度やCPU負荷をリアルタイムに監視し、残りの使用可能時間を分単位で正確に算出する制御アルゴリズムを実装しました [cite: 11, 26, 34, 72]。
               </p>
             </div>
-          </div>
-        </section>
 
-        {/* Awards Section */}
-        <section>
-          <h2 className="text-xl font-bold mb-6 text-slate-900 uppercase tracking-wider border-l-4 border-slate-900 pl-3">Awards</h2>
-          <div className="flex justify-between items-start border-b border-slate-100 pb-4">
             <div>
-              <p className="font-bold text-lg">名証株式投資コンテスト 団体戦 優勝</p>
+              <p className="text-xs font-bold text-slate-500 mb-1 tracking-wide">Current Research (2026)</p>
+              <h3 className="text-lg font-bold mb-2 leading-snug">Domain Heuristic Mixer: Introduction of a Dynamic Heuristic Mixer Leveraging Domain Knowledge</h3>
+              <p className="text-slate-700 leading-relaxed text-sm">
+                ドメイン知識を活用した動的ヒューリスティック・ミキサー（DHM-QAOA）の導入による、量子アルゴリズムを用いたゲームマッチングの最適化。
+                既存のQAOA回路にドメイン特化のミキサーを組み込むことで、組み合わせ最適化問題における解の収束効率と精度の向上を研究しています。
+              </p>
             </div>
-            <p className="text-sm text-slate-500 font-bold">2025.12</p>
           </div>
         </section>
 
