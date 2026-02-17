@@ -4,16 +4,14 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white py-12 px-6 text-slate-900">
       <div className="max-w-4xl mx-auto space-y-12">
-        
         {/* Header Section */}
         <header className="border-b border-slate-200 pb-8 text-left">
           <h1 className="text-3xl font-bold mb-4 tracking-tight">Yuhsaku Nakai</h1>
           <div className="flex flex-wrap gap-x-8 gap-y-2 text-slate-600 text-sm">
             <div className="flex items-center gap-2">
               <span className="font-semibold text-slate-900">GitHub:</span>
-              <a href="https://github.com/aliks-kuro" target="_blank" rel="noopener noreferrer" className="hover:underline">aliks-kuro</a>
+              <a href="https://github.com/aliks-kuro" target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-600">github.com/aliks-kuro</a>
             </div>
-            <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
               <span className="font-semibold text-slate-900">Email:</span>
               <span>your-email@example.com</span>
